@@ -4,7 +4,7 @@ name: Blog CI/CD
 on:
   push:
     branches: 
-      - master
+      - hexo
 
 env:
   TZ: Asia/Shanghai
@@ -34,6 +34,7 @@ jobs:
     - name: Install hexo dependencies
       # 下载 hexo-cli 脚手架及相关安装包
       run: |
+        cd blog
         npm install -g hexo-cli
         npm install
 
